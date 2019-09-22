@@ -17,5 +17,4 @@ before_install:
 - docker pull shayanealcantara/gh-pages-docker-travis
 
 script:
-  - docker run shayanealcantara/gh-pages-docker-travis bash -c "cd docs; ls; sh publish.sh"
-  - docker ps -a
+  - docker run shayanealcantara/gh-pages-docker-travis bash -c "sh publish.sh"
