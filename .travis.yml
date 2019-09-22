@@ -1,5 +1,8 @@
 # .travis.yml
+sudo: required
 language: node_js
+services:
+  - docker
 node_js:
   - '8'
 
@@ -9,6 +12,11 @@ branches:
 
 cache:
   yarn: true
+
+before_install:
+- docker pull shayanealcantara/gh-pages-docker-travis
+- docker run -d -p 3000:3000 shayanealcantara/gh-pages-docker-travis bash
+- docker ps -a
 
 script:
   - git config --global user.name "${GH_NAME}"
