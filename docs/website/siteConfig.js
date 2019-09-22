@@ -24,12 +24,12 @@ const siteConfig = {
   title: 'Test Site', // Title for your website.
   tagline: 'A website for testing',
   //Production
-  url: 'https://shayanealcantara.github.io/continuous-integration/', // Your website URL
-  baseUrl: '/continuous-integration/', // Base URL for your project */
+  //url: 'https://shayanealcantara.github.io/continuous-integration/', // Your website URL
+  //baseUrl: '/continuous-integration/', // Base URL for your project */
 
   //Development
-  // url: 'https://localhost:3000/', // Your website URL
-  // baseUrl: '/', // Base URL for your project */
+   url: 'https://localhost:3000/', // Your website URL
+   baseUrl: '/', // Base URL for your project */
 
   // Used for publishing and more
   projectName: 'continuous-integration',
