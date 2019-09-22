@@ -15,11 +15,7 @@ cache:
 
 before_install:
 - docker pull shayanealcantara/gh-pages-docker-travis
-- docker run -d -p 3000:3000 shayanealcantara/gh-pages-docker-travis bash
-- docker ps -a
 
 script:
-  - git config --global user.name "${GH_NAME}"
-  - git config --global user.email "${GH_EMAIL}"
-  - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-  - cd docs/website && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+  - docker run shayanealcantara/gh-pages-docker-travis bash -c "cd docs; ls; sh publish.sh"
+  - docker ps -a
