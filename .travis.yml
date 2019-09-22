@@ -1,13 +1,5 @@
 sudo: required
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: required
-      env: CC=clang CXX=clang++ npm_config_clang=1
-      compiler: clang
-
 addons:
   apt:
     packages:
@@ -29,7 +21,7 @@ cache:
     - node_modules
 
 install:
-  - npm install -g yarn@1.2.1
+  - npm install -g yarn
   - yarn install --force
 
 before_script:
